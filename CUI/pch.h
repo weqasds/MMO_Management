@@ -9,10 +9,22 @@ using namespace std;
 #include <jdbc\mysql_driver.h>
 #include <jdbc\mysql_connection.h>
 #include <jdbc\cppconn\driver.h>
+
+//std
+#include <list>
+#include <iostream>
+#include <string>
+#include <tuple>
+#include <unordered_map>
+#include <vector>
+#include <cctype>
+#include <sstream>
+#include <type_traits>
+#include <functional>
+#include <thread>
+#include <typeinfo>	
+
 //Entity&Interface
-#include<list>
-#include<iostream>
-#include<string>
 #include"Header\Interface\Operation.h"
 #include"Header\Entity\Entity.h"
 #include"Header\Entity\Admin.h"
@@ -27,4 +39,6 @@ using namespace std;
 //ORM
 //namespace:ORM
 #include"Header\ORM\SQLConnector.h"
-
+#include"Header\ORM\DbSet.h"
+#include"Header\ORM\Nullable.h"
+#include"Header\ORM\DataBase.h"
