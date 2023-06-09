@@ -89,6 +89,9 @@
     <ClCompile Include="Source\Shop.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Header\Util\Menu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

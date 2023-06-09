@@ -182,6 +182,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Header\Util\Menu.cpp" />
     <ClCompile Include="Source\Admin.cpp" />
     <ClCompile Include="Source\Bag.cpp" />
     <ClCompile Include="Source\Character.cpp" />
