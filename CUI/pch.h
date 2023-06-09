@@ -36,9 +36,12 @@ using namespace std;
 #include"Header\Entity\Shop.h"
 //Util
 #include"Header\Util\Menu.h"
+
 //ORM
 //namespace:ORM
 #include"Header\ORM\SQLConnector.h"
 #include"Header\ORM\DbSet.h"
 #include"Header\ORM\Nullable.h"
 #include"Header\ORM\DataBase.h"
+#include "Header\ORM\Define.h"
+using namespace BOT_ORM_Impl;

@@ -1,5 +1,6 @@
 #pragma once
 #include"..\..\pch.h"
+#include"..\ORM\Define.h"
 enum Level
 {
 	lowlest,
@@ -8,6 +9,7 @@ enum Level
 };
 class Admin :public Entity
 {
+	ORMAP("Admin", admin_id, admin_account, admin_password, admin_level);
 public:
 	// Í¨¹ý Entity ¼Ì³Ð
 	virtual string Get_Id() override;
@@ -23,7 +25,7 @@ private:
 	string admin_id;
 	string admin_account;
 	string admin_password = "123456";
-	Level admin_level = normal;
+	Level admin_level = Level::normal;
 };
 
 

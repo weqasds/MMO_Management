@@ -176,6 +176,7 @@
     <ClInclude Include="Header\Interface\Operation.h" />
     <ClInclude Include="Header\ORM\DataBase.h" />
     <ClInclude Include="Header\ORM\DbSet.h" />
+    <ClInclude Include="Header\ORM\Define.h" />
     <ClInclude Include="Header\ORM\Nullable.h" />
     <ClInclude Include="Header\ORM\SQLConnector.h" />
     <ClInclude Include="Header\Util\Menu.h" />
