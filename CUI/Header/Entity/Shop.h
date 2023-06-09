@@ -1,7 +1,9 @@
 #pragma once
 #include "..\..\pch.h"
+#include "..\ORM\Define.h"
 class Shop : public Entity
 {
+	ORMAP("Shop", item_id, item_name, item_description, item_num, item_cost);
 public:
 
 	// Í¨¹ý Entity ¼Ì³Ð

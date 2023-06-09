@@ -8,5 +8,6 @@ public:
 	virtual bool Equal(const Entity& t) = 0;
 	virtual int Get_HashCode() = 0;
 	virtual bool operator==(const Entity& t) = 0;
+	virtual ~Entity() = 0;
 };
 

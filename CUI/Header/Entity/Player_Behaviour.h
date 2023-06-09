@@ -1,7 +1,9 @@
 #pragma once
 #include "..\..\pch.h"
+#include "..\ORM\Define.h"
 class Player_Behaviour : public Entity
 {
+	ORMAP("Player_Behaviour", player_id, behavior_type, behavior_time, behavior_detail);
 public:
 	// Í¨¹ý Entity ¼Ì³Ð
 	virtual string Get_Id() override;

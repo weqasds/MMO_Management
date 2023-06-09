@@ -9,7 +9,7 @@ namespace ORM
 		virtual int Add(TEntity t) override;
 		virtual int Update(TEntity t) override;
 		virtual int Delete(TEntity t) override;
-		DbSet();
+		DbSet(mysqlx::Schema&,string&);
 		~DbSet();
 	private:
 		mysqlx::Table* set;
@@ -30,13 +30,14 @@ namespace ORM
 		return 0;
 	}
 	template<class TEntity>
-	inline DbSet<TEntity>::DbSet()
+	inline DbSet<TEntity>::DbSet(mysqlx::Schema& db,string& tablename)
 	{
-		set=new mysqlx::Table()
+		set = new mysqlx::Table(db,tablename);
 	}
 	template<class TEntity>
 	inline DbSet<TEntity>::~DbSet()
 	{
+		delete set;
 	}
 }
 
