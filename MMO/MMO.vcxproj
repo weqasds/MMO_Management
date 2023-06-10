@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9a9c7afb-e116-46e6-aefb-21b6420cf291}</ProjectGuid>
-    <RootNamespace>CUI</RootNamespace>
+    <ProjectGuid>{42013a5f-5180-435d-b6e9-7eed33712ded}</ProjectGuid>
+    <RootNamespace>MMO</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -72,25 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\Program Files\MySQL\Connector C++ 8.0\include;C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Program Files\MySQL\Connector C++ 8.0\include\mysql;C:\Program Files\MySQL\Connector C++ 8.0\include\mysqlx;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\Connector C++ 8.0\lib64;$(LibraryPath)</LibraryPath>
-    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\Program Files\MySQL\Connector C++ 8.0\lib64;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\Program Files\MySQL\Connector C++ 8.0\include;C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Program Files\MySQL\Connector C++ 8.0\include\mysql;C:\Program Files\MySQL\Connector C++ 8.0\include\mysqlx;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\Connector C++ 8.0\lib64;$(LibraryPath)</LibraryPath>
-    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>C:\Program Files\MySQL\Connector C++ 8.0\lib64;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>C:\Program Files\MySQL\Connector C++ 8.0\include;C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Program Files\MySQL\Connector C++ 8.0\include\mysql;C:\Program Files\MySQL\Connector C++ 8.0\include\mysqlx;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\Connector C++ 8.0\lib64;$(LibraryPath)</LibraryPath>
-    <LinkIncremental>false</LinkIncremental>
-    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>C:\Program Files\MySQL\Connector C++ 8.0\lib64;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Program Files\MySQL\Connector C++ 8.0\include;C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Program Files\MySQL\Connector C++ 8.0\include\mysql;C:\Program Files\MySQL\Connector C++ 8.0\include\mysqlx;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\Connector C++ 8.0\lib64;$(LibraryPath)</LibraryPath>
-    <LinkIncremental>false</LinkIncremental>
-    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>C:\Program Files\MySQL\Connector C++ 8.0\lib64;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -98,15 +92,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Program Files\MySQL\Connector C++ 8.0\include\mysql;C:\Program Files\MySQL\Connector C++ 8.0\include\mysqlx;C:\Program Files\MySQL\Connector C++ 8.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 8.0\lib64;C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\libcrypto.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -117,9 +110,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Program Files\MySQL\Connector C++ 8.0\include\mysql;C:\Program Files\MySQL\Connector C++ 8.0\include\mysqlx;C:\Program Files\MySQL\Connector C++ 8.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,24 +119,23 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 8.0\lib64;C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\libcrypto.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>STATIC_CONCPP;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Program Files\MySQL\Connector C++ 8.0\include\mysql;C:\Program Files\MySQL\Connector C++ 8.0\include\mysqlx;C:\Program Files\MySQL\Connector C++ 8.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 8.0\lib64;C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\libcrypto.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -155,9 +146,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>C:\Program Files\MySQL\Connector C++ 8.0\include\jdbc;C:\Program Files\MySQL\Connector C++ 8.0\include\mysql;C:\Program Files\MySQL\Connector C++ 8.0\include\mysqlx;C:\Program Files\MySQL\Connector C++ 8.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -165,9 +155,23 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Program Files\MySQL\Connector C++ 8.0\lib64;C:\Program Files\MySQL\Connector C++ 8.0\lib64\plugin;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\libcrypto.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn8-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\mysqlcppconn-static.lib;C:\Program Files\MySQL\Connector C++ 8.0\lib64\vs14\libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Entity\Admin.cpp" />
+    <ClCompile Include="Source\Entity\Bag.cpp" />
+    <ClCompile Include="Source\Entity\Character.cpp" />
+    <ClCompile Include="Source\Entity\Entity.cpp" />
+    <ClCompile Include="Source\Entity\Equip.cpp" />
+    <ClCompile Include="Source\Entity\Player.cpp" />
+    <ClCompile Include="Source\Entity\Player_Behaviour.cpp" />
+    <ClCompile Include="Source\Entity\Shop.cpp" />
+    <ClCompile Include="Source\SqlManager\DbSet.cpp" />
+    <ClCompile Include="Source\SqlManager\ORM.cpp" />
+    <ClCompile Include="Source\Util\Menu.cpp" />
+    <ClCompile Include="源.cpp" />
+  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\Entity\Admin.h" />
     <ClInclude Include="Header\Entity\Bag.h" />
@@ -177,29 +181,10 @@
     <ClInclude Include="Header\Entity\Player.h" />
     <ClInclude Include="Header\Entity\Player_Behaviour.h" />
     <ClInclude Include="Header\Entity\Shop.h" />
-    <ClInclude Include="Header\Interface\Operation.h" />
-    <ClInclude Include="Header\ORM\DataBase.h" />
-    <ClInclude Include="Header\ORM\DbSet.h" />
-    <ClInclude Include="Header\ORM\Define.h" />
-    <ClInclude Include="Header\ORM\Mapper.h" />
-    <ClInclude Include="Header\ORM\Nullable.h" />
-    <ClInclude Include="Header\ORM\SQLConnector.h" />
+    <ClInclude Include="Header\SqlManager\ORM.h" />
     <ClInclude Include="Header\Util\Menu.h" />
     <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Source\Admin.cpp" />
-    <ClCompile Include="Source\Bag.cpp" />
-    <ClCompile Include="Source\Character.cpp" />
-    <ClCompile Include="Source\Equip.cpp" />
-    <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Source\Player.cpp" />
-    <ClCompile Include="Source\Player_Behaviour.cpp" />
-    <ClCompile Include="Source\Shop.cpp" />
-    <ClCompile Include="源.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="Header\SqlManager\DbSet.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

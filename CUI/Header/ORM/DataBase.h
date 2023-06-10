@@ -12,7 +12,7 @@ namespace ORM
 			for(auto table : db->getTables())
 			{
 				string name = table.getName();
-				auto set = 
+
 			}
 		}
 		~DataBase()

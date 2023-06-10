@@ -1,0 +1,69 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "gameContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "GUI",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "admin_entity",
+         "ObjectType": 0
+      },
+      {
+         "Name": "bag_entity",
+         "ObjectType": 0
+      },
+      {
+         "Name": "character_entity",
+         "ObjectType": 0
+      },
+      {
+         "Name": "character_equip_entity",
+         "ObjectType": 0
+      },
+      {
+         "Name": "player_behavior_entity",
+         "ObjectType": 0
+      },
+      {
+         "Name": "player_character",
+         "ObjectType": 0
+      },
+      {
+         "Name": "player_info_entity",
+         "ObjectType": 0
+      },
+      {
+         "Name": "shop_info_entity",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "Game",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": true,
+   "UseT4": false
+}
