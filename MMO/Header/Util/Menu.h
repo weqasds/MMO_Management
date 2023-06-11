@@ -3,7 +3,7 @@
 class Menu
 {
 public:
-	Menu();//菜单
+	Menu(ORM&);//构造函数
 	void Login();//登录
 	void Main_Menu();//主菜单
 	void Data_Manipulation();//数据操纵功能
@@ -20,5 +20,6 @@ public:
 	~Menu();
 private:
 	Admin admin;
+	ORM& cache;
 };
 
