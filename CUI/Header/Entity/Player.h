@@ -1,7 +1,9 @@
 #pragma once
 #include "..\..\pch.h"
+#include"..\ORM\Define.h"
 class Player : public Entity
 {
+    ORMAP("Player", player_id, character_id, account, nickname, gender, age);
 public:
     // Í¨¹ý Entity ¼Ì³Ð
     virtual string Get_Id() override;
@@ -17,7 +19,7 @@ private:
     string character_id;
     string account;
     string nickname;
-    Sex gender=Male;
+    Sex gender=Sex::Male;
     int age;
 };
 

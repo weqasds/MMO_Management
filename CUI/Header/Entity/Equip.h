@@ -1,7 +1,9 @@
 #pragma once
 #include"..\..\pch.h"
+#include"..\ORM\Define.h"
 class Equip : public Entity
 {
+	ORMAP("Equip", equip_id, equip_name, hp, attack, def, phys_resist);
 public:
 	// Í¨¹ý Entity ¼Ì³Ð
 	virtual string Get_Id() override;

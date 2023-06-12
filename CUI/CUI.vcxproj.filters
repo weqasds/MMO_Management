@@ -60,6 +60,12 @@
     <ClInclude Include="Header\ORM\DataBase.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Header\ORM\Define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\ORM\Mapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

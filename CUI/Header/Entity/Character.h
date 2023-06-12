@@ -1,5 +1,6 @@
 #pragma once
 #include"..\..\pch.h"
+#include"..\ORM\Define.h"
 enum Sex
 {
 	Male,
@@ -7,6 +8,7 @@ enum Sex
 };
 class Character : public Entity
 {
+	ORMAP("Character", player_id, character_id, gender, exp, profession, hp, attack, physical_resist, equip_name, equip_id, bag_id, hash_id);
 public:
 	// Í¨¹ý Entity ¼Ì³Ð
 	virtual string Get_Id() override;
@@ -20,7 +22,7 @@ public:
 private:
 	string player_id;
 	string character_id;
-	Sex gender = Male;
+	Sex gender = Sex::Male;
 	int exp;
 	string profession;
 	int hp;
