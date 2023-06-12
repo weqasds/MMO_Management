@@ -19,10 +19,6 @@ int Shop::Get_HashCode()
 	return 0;
 }
 
-bool Shop::operator==(const Entity& t)
-{
-	return false;
-}
 
 Shop::Shop()
 {

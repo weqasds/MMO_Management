@@ -19,11 +19,6 @@ int Player_Behaviour::Get_HashCode()
 	return 0;
 }
 
-bool Player_Behaviour::operator==(const Entity& t)
-{
-	return false;
-}
-
 Player_Behaviour::Player_Behaviour()
 {
 }

@@ -19,10 +19,6 @@ int Player::Get_HashCode()
 	return 0;
 }
 
-bool Player::operator==(const Entity& t)
-{
-	return false;
-}
 
 Player::Player()
 {

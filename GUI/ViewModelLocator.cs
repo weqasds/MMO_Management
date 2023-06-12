@@ -23,9 +23,5 @@ namespace GUI
             ServiceProvider = services.BuildServiceProvider();
             Ioc.Default.ConfigureServices(ServiceProvider);
         }
-        public void GetViewModel()
-        {
-
-        }
     }
 }

@@ -19,10 +19,6 @@ int Equip::Get_HashCode()
     return 0;
 }
 
-bool Equip::operator==(const Entity& t)
-{
-    return false;
-}
 
 Equip::Equip()
 {

@@ -18,10 +18,6 @@ int Character::Get_HashCode()
 	return 0;
 }
 
-bool Character::operator==(const Entity& t)
-{
-	return false;
-}
 
 
 Character::Character()

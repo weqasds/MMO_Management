@@ -13,6 +13,10 @@ public:
 	//构造函数
 	Bag();
 	Bag(string, int, string);
+
+	//运算符重载
+	friend istream& operator>>(istream& input, Bag& bag);
+	friend ostream& operator<<(ostream& output, Bag& bag);
 private:
 	string bag_id;
 	int capacity = 10;

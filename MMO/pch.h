@@ -28,10 +28,9 @@ using namespace std;
 #include"Header\Entity\Player.h"
 #include"Header\Entity\Shop.h"
 
-
-//Util
-#include"Header\Util\Menu.h"
-
 //Sql
 #include"Header\SqlManager\ORM.h"
 #include"Header\SqlManager\DbSet.h"
+
+//Util
+#include"Header\Util\Menu.h"

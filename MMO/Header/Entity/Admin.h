@@ -19,15 +19,16 @@ public:
 	//get&set
 	Level Get_Level();
 	void Set_Level(Level level);
-	
-	bool operator==(const Admin& right);
-
 
 	operator bool();
 	//构造函数
 	Admin();
 	Admin(string, string, string, Level);
+
+	//运算符重载
 	friend istream& operator>>(istream& input,Admin& admin);
+	friend ostream& operator<<(ostream& ouput,Admin& admin);
+	bool operator==(const Admin& right);
 private:
 	string admin_id;
 	string admin_account;

@@ -1,9 +1,10 @@
 #pragma once
 #include"..\..\pch.h"
+#include "..\SqlManager\ORM.h"
 class Menu
 {
 public:
-	Menu(ORM&);//构造函数
+	Menu(ORM& c);//构造函数
 	void Login();//登录
 	void Main_Menu();//主菜单
 	void Data_Manipulation();//数据操纵功能
@@ -15,8 +16,8 @@ public:
 	void Apply();//申请
 	void Data_Maintenance();//数据维护
 	void Data_Migrate();//数据迁移
-	void Add();//增加新功能
-	void Delete();//删除旧功能
+	void Add();//增加表格
+	void Delete();//删除表格
 	~Menu();
 private:
 	Admin admin;

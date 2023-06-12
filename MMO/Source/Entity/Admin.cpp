@@ -5,7 +5,7 @@ istream& operator>>(istream& input,Admin& admin)
 	input >> admin.admin_account;
 	cout << "ÇëÊäÈëÕË»§ÃÜÂë£º";
 	input >> admin.admin_password;
-	
+	return input;
 }
 
 string Admin::Get_Id()
