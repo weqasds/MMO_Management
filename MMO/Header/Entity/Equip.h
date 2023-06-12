@@ -18,5 +18,8 @@ private:
 	string equip_type;
 	int hp, attack, def;
 	float phys_resist;
+	//ÔËËãÆ÷ÖØÔØ
+	friend istream& operator>>(istream& input, Equip& equip);
+	friend ostream& operator<<(ostream& outpou, Equip& equip);
 };
 

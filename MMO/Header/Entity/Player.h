@@ -19,5 +19,8 @@ private:
     string nickname;
     Sex gender = Sex::Male;
     int age;
+    //ÔËËãÆ÷ÖØÔØ
+    friend istream& operator>>(istream& input, Player& player);
+    friend ostream& operator<<(ostream& outpou, Player& player);
 };
 

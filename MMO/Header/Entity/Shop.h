@@ -20,5 +20,8 @@ private:
 	int item_description;
 	int item_num;
 	int item_cost;
+	//ÔËËãÆ÷ÖØÔØ
+	friend istream& operator>>(istream& input, Shop& shop);
+	friend ostream& operator<<(ostream& outpou, Shop& shop);
 };
 
