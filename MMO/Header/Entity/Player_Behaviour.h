@@ -17,5 +17,8 @@ private:
 	int behavior_type;
 	string behavior_time;
 	string behavior_detail;
+	//ÔËËãÆ÷ÖØÔØ
+	friend istream& operator>>(istream& input, Player_Behaviour& player_behaviour);
+	friend ostream& operator<<(ostream& outpou, Player_Behaviour& player_behaviour);
 };
 

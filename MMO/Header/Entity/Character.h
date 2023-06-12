@@ -25,10 +25,14 @@ private:
 	string profession;
 	int hp;
 	int attack;
+	int defense;
 	float physical_resist;
 	string equip_name;
 	string equip_id;
 	string bag_id;
 	string hash_id;
+	//ÔËËã·ûÖØÔØ
+	friend istream& operator>>(istream& input, Character& character);
+	friend ostream& operator<<(ostream& outpou, Character& character);
 };
 
