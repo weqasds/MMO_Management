@@ -41,9 +41,10 @@ istream& operator>>(istream& input, Player& player)
 	input >> player.nickname;
 	cout << endl;
 	cout << "请输入玩家性别：";
-	input >> player.gender;
+	/*input >> player.gender;*/
 	cout << endl;
 	cout << "请输入玩家年龄：";
 	input >> player.age;
 	cout << endl;
+	return input;
 }

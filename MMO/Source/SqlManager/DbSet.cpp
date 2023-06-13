@@ -66,12 +66,12 @@ void DbSet::Insert()
 			.execute();
 		break;
 	case 7:
-		if (true) {
+		if (false) {
 			cout << "权限不足，请申请或者更换登录账户" << endl;
 			break;
 		}
 		res=this->insert("admin_id", "admin_account", "admin_password", "admin_level")
-			.values("", "", "","")
+			.values("20006", "21006", "12345","2")
 			.execute();
 			break;
 	default:

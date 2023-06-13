@@ -48,4 +48,5 @@ istream& operator>>(istream& input, Equip& equip)
     cout << "请输入装备增加的物理抗性值";
     input >> equip.phys_resist;
     cout << endl;
+    return input;
 }

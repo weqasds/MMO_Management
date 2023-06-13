@@ -38,5 +38,5 @@ istream& operator>>(istream& input, Player_Behaviour& player_behaviour)
 	cout << "请输入行为详情：";
 	input >> player_behaviour.behavior_detail;
 	cout << endl;
-
+	return input;
 }

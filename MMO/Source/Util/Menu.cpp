@@ -94,12 +94,14 @@ void Menu::Main_Menu()//主菜单
 				break;
 			case 6:
 				condtion = false;
-				break;
+				return;
 			default:
 				cout << "选择错误，请重新选择：";
 				cin >> c;
 				break;
 			}
+			cout << "执行完毕请重新选择:";
+			cin >> c;
 		}
 	}
 	catch (const std::exception& e)
@@ -127,7 +129,8 @@ void Menu::Data_Manipulation()
 	cout << "*************************************************" << endl;
 	cout << "请选择:";
 	cin >> c;
-	DbSet* d = dynamic_cast<DbSet*>(this->cache.GetSelectTable());
+	mysqlx::Table* t = this->cache.GetSelectTable();
+	DbSet* d = dynamic_cast<DbSet*>(t);
 	while (condtion)
 	{
 		switch (c)
@@ -149,7 +152,7 @@ void Menu::Data_Manipulation()
 			break;
 		case 6:
 			condtion = false;
-			break;
+			return;
 		case 7:
 			Console();
 			break;
@@ -157,6 +160,7 @@ void Menu::Data_Manipulation()
 			cout << "输入错误，请重新输入:";
 			break;
 		}
+		cout << "执行完成，请重新选择:";
 		cin >> c;
 	}
 }

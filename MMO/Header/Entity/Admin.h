@@ -24,6 +24,7 @@ public:
 	//构造函数
 	Admin();
 	Admin(string, string, string, Level);
+	Admin(const mysqlx::Row& row);
 	//运算符重载
 	friend istream& operator>>(istream& input,Admin& admin);
 

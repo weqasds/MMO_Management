@@ -45,4 +45,5 @@ istream& operator>>(istream& input, Shop& shop)
 	cout << "请输入物品价格：";
 	input >> shop.item_cost;
 	cout << endl;
+	return input;
 }

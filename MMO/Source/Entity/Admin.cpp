@@ -8,6 +8,12 @@ istream& operator>>(istream& input,Admin& admin)
 	return input;
 }
 
+ostream& operator<<(ostream& output, Admin& admin)
+{
+	// TODO: 在此处插入 return 语句
+	return output;
+}
+
 string Admin::Get_Id()
 {
 	return this->admin_id;
@@ -37,14 +43,6 @@ void Admin::Set_Level(Level level)
 	this->admin_level = level;
 }
 
-bool Admin::operator==(const Admin& right)
-{
-	if (true)
-	{
-		return true;
-	}
-	return false;
-}
 
 Admin::operator bool()
 {
@@ -59,5 +57,13 @@ Admin::Admin()
 Admin::Admin(string id, string account, string pwd, Level level)
 {
 
+}
+
+Admin::Admin(const mysqlx::Row& row)
+{
+	this->admin_id = row[0].get<string>();
+	this->admin_account = row[1].get<string>();
+	this->admin_password = row[2].get<string>();
+	this->admin_level = static_cast<Level>(row[3].get<int>());
 }
 

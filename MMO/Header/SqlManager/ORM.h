@@ -5,8 +5,8 @@ class ORM
 public:
 	//构造函数&析构函数
 	ORM(string coonstr,bool t);
-	template<typename Arg,typename ...T>
-	ORM(Arg arg,T...option);
+	template<typename ...T>
+	ORM(T...option);
 	~ORM();
 	//功能函数
 	void Backup();//备份
@@ -15,24 +15,25 @@ public:
 	void DeleteTable(string name);//删除表
 	//get set方法
 	mysqlx::Table* GetSelectTable() {
-		return this->SelectTable;
+		return this->selectTable;
 	}
 	mysqlx::Schema GetSeelectDb() {
-		return this->SelectDb;
+		return this->selectDb;
 	}
 	list<mysqlx::Schema>* GetAllDbs() {
 		return &(this->dbs);
 	}
-	list<mysqlx::Table*>* GetAllTables() {
+	vector<mysqlx::Table*>* GetAllTables() {
 		return &(this->tables);
 	}
 
 private:
-	mysqlx::Schema SelectDb;
-	mysqlx::Table* SelectTable;
+	mysqlx::Session coon;
+	mysqlx::Schema selectDb;
+	mysqlx::Table* selectTable;
 	list<mysqlx::Schema> dbs;
-	list<mysqlx::Table*> tables;
-	mysqlx::Session* coon;
+	vector<mysqlx::Table*> tables;
 	string rootpwd;
+	list<Admin> adminSet;
 };
 
