@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GUI.ViewModel
+namespace GUI.Services
 {
-    class LoginViewModel : ObservableRecipient
+    internal interface IFileService
     {
     }
 }

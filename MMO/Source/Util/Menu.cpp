@@ -37,19 +37,23 @@
 //}
 Menu::Menu(ORM& c):cache(c)
 {
-	this->admin = Admin();
 	Login();
 	return;
 }
 
 void Menu::Login()//µÇÂ¼
 {
-	cout << "";
+	this->admin = Admin();
 	cin >> this->admin;
-	admin.Set_Level(Level::normal);
-	if (!this->admin) {
-		/**/
-		cout << "ÕË»§µÇÂ¼Ê§°Ü£¡£¡£¡" << endl;
+	Admin t = cache.GetAdmin(admin);
+	if (this->admin == t) {
+		admin.Set_Level(t.Get_Level());
+		this->admin.Set_Id(t.Get_Id());
+	}
+	else
+	{
+		cout << "µÇÂ¼Ê§°Ü£¬ÇëÖØÐÂµÇÂ¼£¡£¡£¡" << endl;
+		this->cache.~ORM();
 		exit(1);
 	}
 	return;

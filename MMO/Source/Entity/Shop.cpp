@@ -2,7 +2,7 @@
 
 string Shop::Get_Id()
 {
-	return string();
+	return item_id;
 }
 
 void Shop::To_String()
@@ -27,6 +27,14 @@ Shop::Shop()
 	item_cost = 0;
 }
 
+Shop::Shop(mysqlx::Row& row)
+{
+	this->item_id=row[0].get<string>();
+	this->item_name=row[1].get<string>();
+	this->item_num=row[2].get<int>();
+	this->item_cost=row[3].get<int>();
+}
+
 istream& operator>>(istream& input, Shop& shop)
 {
 	// TODO: 在此处插入 return 语句
@@ -46,4 +54,12 @@ istream& operator>>(istream& input, Shop& shop)
 	input >> shop.item_cost;
 	cout << endl;
 	return input;
+}
+
+ostream& operator<<(ostream& output, const Shop& shop)
+{
+	// TODO: 在此处插入 return 语句
+	output << "物品id:" << shop.item_id << "物品名称:" << shop.item_name << "物品描述:" << shop.item_description << endl
+		<< "物品数量:" << shop.item_num << "物品花费:" << shop.item_cost << endl;
+	return output;
 }

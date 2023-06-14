@@ -17,6 +17,7 @@ using namespace std;
 #include <tuple>
 #include <unordered_map>
 #include <vector>
+#include <algorithm>
 
 //Entity&Interface
 #include"Header\Entity\Entity.h"

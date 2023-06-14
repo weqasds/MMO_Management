@@ -15,8 +15,26 @@ public:
 	virtual int Get_HashCode() override;
 	/*virtual bool operator==(const Entity& t) override;*/
 
+	//get&set
+	void SetPlayerId(string playerid) { player_id = playerid; }
+	string GetCharacterId() { return character_id; }
+	void SetCharacterId(string characterid) { character_id = characterid; }
+	Sex GetGender() { return gender; }
+	int GetExp() { return exp; }
+	string GetProfession() { return profession; }
+	int GetHp() { return hp; }
+	int GetAttack() { return attack; }
+	int GetDef() { return def; }
+	float GetPhysicalResist() { return physical_resist; }
+	string GetEquipName() { return equip_name; }
+	string GetEquipId() { return equip_id; }
+	string GetBagId() { return bag_id; }
 	//构造函数
 	Character();
+	Character(const mysqlx::Row& row);
+	//运算符重载
+	friend istream& operator>>(istream& input, Character& character);
+	friend ostream& operator<<(ostream& outpou, const Character& character);
 private:
 	string player_id;
 	string character_id;
@@ -25,14 +43,10 @@ private:
 	string profession;
 	int hp;
 	int attack;
-	int defense;
+	int def;
 	float physical_resist;
 	string equip_name;
 	string equip_id;
 	string bag_id;
-	string hash_id;
-	//运算符重载
-	friend istream& operator>>(istream& input, Character& character);
-	friend ostream& operator<<(ostream& outpou, Character& character);
 };
 

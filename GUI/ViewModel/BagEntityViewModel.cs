@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GUI.ViewModel
 {
-    class LoginViewModel : ObservableRecipient
+    public class BagEntityViewModel : ObservableRecipient
     {
     }
 }

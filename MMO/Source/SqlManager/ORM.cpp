@@ -34,7 +34,8 @@ ORM::ORM(string coonstr,bool t):
 		mysqlx::RowResult set=t.select("admin_id", "admin_account", "admin_password", "admin_level")
 			                   .execute();
 		for (auto i : set.fetchAll()) {
-			adminSet.push_back(i);
+			adminSet[i[1].get<string>()] = i;
+			//adminSet.push_back(i);
 		}
 	}
 	catch (const std::exception& e)
@@ -44,7 +45,6 @@ ORM::ORM(string coonstr,bool t):
 	mysqlx::Table temp = this->selectDb.getTable("admin_entity", true);
 	mysqlx::Table* tempt = new DbSet(temp);
 	this->selectTable = tempt;
-
 }
 template<typename ...T>
 ORM::ORM(T...option):

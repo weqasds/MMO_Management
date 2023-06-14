@@ -5,10 +5,10 @@
     xmlns:ioc="clr-namespace:CommunityToolkit.Mvvm.DependencyInjection;assembly=CommunityToolkit.Mvvm"
     xmlns:local="clr-namespace:GUI"
     xmlns:ui="http://schemas.modernwpf.com/2019"
-    StartupUri="MainWindow.xaml">
+    StartupUri="View\Login.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <local:ViewModelLocator x:Key="Locator" />
+            <local:ViewModelLocator x:Key="Locator"/>
             <ResourceDictionary.MergedDictionaries>
                 <ui:ThemeResources />
                 <ui:XamlControlsResources />

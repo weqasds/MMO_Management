@@ -10,8 +10,20 @@ public:
     virtual int Get_HashCode() override;
     /*virtual bool operator==(const Entity& t) override;*/
 
+    //get&set
+    void SetPlayerId(string playerid) { player_id = playerid; }
+    string GetCharacterId() { return character_id; }
+    void SetCharacterId(string characterid) { character_id = characterid; }
+    string GetAccount() { return account; }
+    string GetNickName() { return nickname; }
+    Sex GetGender() { return gender; }
+    int GetAge() { return age; }
     //构造函数
     Player();
+    Player(mysqlx::Row& row);
+    //运算器重载
+    friend istream& operator>>(istream& input, Player& player);
+    friend ostream& operator<<(ostream& output, Player& player);
 private:
     string player_id;
     string character_id;
@@ -19,8 +31,5 @@ private:
     string nickname;
     Sex gender = Sex::Male;
     int age;
-    //运算器重载
-    friend istream& operator>>(istream& input, Player& player);
-    friend ostream& operator<<(ostream& outpou, Player& player);
 };
 

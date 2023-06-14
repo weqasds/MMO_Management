@@ -26,6 +26,10 @@ public:
 	vector<mysqlx::Table*>* GetAllTables() {
 		return &(this->tables);
 	}
+	Admin GetAdmin(string s) {
+		return (adminSet.find(s))->second;
+	}
+	string GetRootPwd() { return rootpwd; }
 
 private:
 	mysqlx::Session coon;
@@ -34,6 +38,6 @@ private:
 	list<mysqlx::Schema> dbs;
 	vector<mysqlx::Table*> tables;
 	string rootpwd;
-	list<Admin> adminSet;
+	map<string,Admin> adminSet;
 };
 

@@ -35,48 +35,81 @@ void DbSet::Insert()
 	mysqlx::Result res;
 	switch (this->name_type)
 	{
-	case 1:
-		res=this->insert("bag_id", "capacity", "bag_data")
-			.values("","","")
-			.execute();
+	case 1: {
+		Bag bag;
+		cin >> bag;
+		res = this->insert("bag_id", "capacity", "bag_data")
+			        .values(bag.Get_Id(), bag.GetCapacity(), "")
+			        .execute();
 		break;
-	case 2:
-		res=this->insert("player_id","character_id","gender","exp","profession","hp","attack","def", "physical_resist", "equip_name", "equip_id", "bag_id")
-			.values("", "", "", "", "", "", "", "", "", "", "", "")
-			.execute();
+	}
+	case 2: {
+		Character character;
+		cin >> character;
+		res = this->insert("player_id", "character_id", "gender",
+			               "exp", "profession", "hp", "attack", "def", "physical_resist",
+			               "equip_name", "equip_id", "bag_id")
+			       .values(character.Get_Id(), character.GetCharacterId(), character.GetGender(),
+				           character.GetExp(), character.GetProfession(), character.GetHp(), character.GetDef(), character.GetPhysicalResist(),
+				           character.GetEquipName(), character.GetEquipId(), character.GetBagId())
+			       .execute();
 		break;
-	case 3:
-		res=this->insert("equip_id", "equip_name", "equip_type", "hp", "attack", "def", "phys_resist")
-			.values("", "", "", "", "", "","")
-			.execute();
+	}
+	case 3: {
+		Equip equip;
+		cin >> equip;
+		res = this->insert("equip_id", "equip_name", "equip_type",
+			               "hp", "attack", "def", "phys_resist")
+			       .values(equip.Get_Id(), equip.GetEquipName(), equip.GetEquipType(),
+				           equip.GetHp(), equip.GetAttack(), equip.GetDef(), equip.GetPhysicalResist())
+			       .execute();
 		break;
-	case 4:
-		res=this->insert("player_id", "behavior_type", "behavior_time", "behavior_detail")
-			.values("", "", "","")
-			.execute();
+	}
+	case 4: {
+		Player_Behaviour pb;
+		cin >> pb;
+		res = this->insert("player_id", "behavior_type", "behavior_time", "behavior_detail")
+			        .values(pb.Get_Id(), pb.GetBehaviorType(), pb.GetBehaviorTime(), pb.GetBehaviorDetail())
+			        .execute();
 		break;
-	case 5:
-		res=this->insert("player_id","character_id","account","nickname","gender","age")
-			.values("", "", "", "", "", "")
-			.execute();
+	}
+	case 5: {
+		Player p;
+		cin >> p;
+		res = this->insert("player_id", "character_id", "account",
+			               "nickname", "gender", "age")
+			       .values(p.Get_Id(), p.GetCharacterId(), p.GetAccount(),
+				           p.GetNickName(), p.GetGender(), p.GetAge())
+			       .execute();
 		break;
-	case 6:
-		res=this->insert("item_name","item_id","item_description","item_num","item_cost")
-			.values("", "", "", "", "")
-			.execute();
+	}
+	case 6: {
+		Shop s;
+		cin >> s;
+		res = this->insert("item_name", "item_id", "item_description", "item_num", "item_cost")
+			       .values(s.GetItemName(), s.Get_Id(), s.GetitemDescription(), s.GetitemNum(), s.GetItemCost())
+			       .execute();
 		break;
-	case 7:
-		if (false) {
-			cout << "权限不足，请申请或者更换登录账户" << endl;
+	}
+	case 7: {
+		std::string pwd;
+		cout << "请输入root密码:";
+		cin >> pwd;
+		if (pwd == "") {
+			Admin a;
+			cin >> a;
+			res = this->insert("admin_id", "admin_account", "admin_password", "admin_level")
+				       .values(a.Get_Id(), a.GetAdminAccount(), a.GetAdminPassword(), a.GetAdminLevel())
+				       .execute();
 			break;
 		}
-		res=this->insert("admin_id", "admin_account", "admin_password", "admin_level")
-			.values("20006", "21006", "12345","2")
-			.execute();
-			break;
+		cout << "root密码错误请重新输入" << endl;
+		break;
+	}
 	default:
 		cout << "不存在此表，请重新选择" << endl;
 		break;
+
 	}
 	if (res.getAffectedItemsCount())
 	{
